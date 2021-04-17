@@ -1,4 +1,4 @@
-# VignanCalendar-
+# Vignan Calendar
 ## My first Development Project
 
 ## Website Link
@@ -9,8 +9,4 @@
 
 ### Sample Screenshot
 
-![alt text](https://github.com/yagneswar17/Calculator/blob/main/CalculatorImage.jpg)
-
-Here Some of the Calculations are shown:
-
-![alt text](https://github.com/yagneswar17/Calculator/blob/main/CalculatoImage2.jpg)
+![alt text](https://github.com/yagneswar17/VignanCalendar-/blob/main/SC1.jpg)
