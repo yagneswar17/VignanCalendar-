@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,200.400,500,600,700,800,900&display=swap');
+* {
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: rgb#f1f1f1;
+    align-items: center;
+}
+
+.glowing {
+    position: relative;
+    min-width: 750px;
+    height: 750px;
+    margin: -150px;
+    transform-origin: right;
+    animation: colorchange 5s linear infinite;
+}
+
+.glowing:nth-child(even) {
+    transform-origin: left;
+}
+
+@keyframes colorchange {
+    0% {
+        filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.glowing span {
+    position: absolute;
+    top: calc(40px * var(--i));
+    left: calc(40px * var(--i));
+    bottom: calc(40px * var(--i));
+    right: calc(40px * var(--i));
+}
+
+.glowing span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    border-radius: 50%;
+}
+
+.glowing span:nth-child(3n+1):before {
+    background: rgba(134, 255, 0, 1);
+    box-shadow: 0 0 20px rgba(134, 255, 0, 1), 0 0 40px rgba(134, 255, 0, 1), 0 0 60px rgba(134, 255, 0, 1), 0 0 80px rgba(134, 255, 0, 1), 0 0 0 8px rgba(134, 255, 0, .1);
+}
+
+.glowing span:nth-child(3n+2):before {
+    background: rgba(255, 214, 0, 1);
+    box-shadow: 0 0 20px rgba(255, 214, 0, 1), 0 0 40px rgba(255, 214, 0, 1), 0 0 60px rgba(255, 214, 0, 1), 0 0 80px rgba(255, 214, 0, 1), 0 0 0 8px rgba(255, 214, 0, .1);
+}
+
+.glowing span:nth-child(3n+3):before {
+    background: rgba(0, 226, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1), 0 0 60px rgba(0, 226, 255, 1), 0 0 80px rgba(0, 226, 255, 1), 0 0 0 8px rgba(0, 226, 255, .1);
+}
+
+.glowing span:nth-child(3n+4):before {
+    background: rgba(134, 255, 0, 1);
+    box-shadow: 0 0 20px rgba(134, 255, 0, 1), 0 0 40px rgba(134, 255, 0, 1), 0 0 60px rgba(134, 255, 0, 1), 0 0 80px rgba(134, 255, 0, 1), 0 0 0 8px rgba(134, 255, 0, .1);
+}
+
+.glowing span:nth-child(3n+5):before {
+    background: rgba(255, 214, 0, 1);
+    box-shadow: 0 0 20px rgba(255, 214, 0, 1), 0 0 40px rgba(255, 214, 0, 1), 0 0 60px rgba(255, 214, 0, 1), 0 0 80px rgba(255, 214, 0, 1), 0 0 0 8px rgba(255, 214, 0, .1);
+}
+
+.glowing span:nth-child(3n+6):before {
+    background: rgba(0, 226, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1), 0 0 60px rgba(0, 226, 255, 1), 0 0 80px rgba(0, 226, 255, 1), 0 0 0 8px rgba(0, 226, 255, .1);
+}
+
+.glowing span:nth-child(3n+1) {
+    animation: animates 120s alternate infinite;
+}
+
+.glowing span:nth-child(3n+2) {
+    animation: animate-reverse 100s alternate infinite;
+}
+
+.glowing span:nth-child(3n+3) {
+    animation: animates 110s alternate infinite;
+}
+
+@keyframes animates {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-reverse {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* Header/Blog Title */
+
+.header,
+.footer {
+    padding: 30px;
+    text-align: center;
+    background: transparent;
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #03e9f4;
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+h3 {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+h5 {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer h2 {
+    color: #232427;
+}
+
+
+/* Style the top navigation bar */
+
+.topnav {
+    overflow: hidden;
+    background-color: #232427;
+}
+
+
+/* Style the topnav links */
+
+.topnav a,
+.topnav button {
+    position: relative;
+    display: inline-block;
+    padding 25px 30px;
+    margin: 40px 10px;
+    color: #03e9f4;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: #232427;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.header a,
+.footer a {
+    position: relative;
+    display: inline-block;
+    padding 25px 30px;
+    margin: 40px 10px;
+    color: #03e9f4;
+    font-size: 34px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.topnav a:nth-child(1),
+.topnav button:nth-child(1) {
+    filter: hue-rotate(290deg);
+}
+
+.topnav a:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+a:hover,
+button:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+}
+
+a span,
+.topnav button span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        left: -100%;
+    }
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate4 {
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate5 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate5 {
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate6 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate6 {
+    0% {
+        bottom: -100%;
+    }
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+.topnav button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        left: -100%;
+    }
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.topnav button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate4 {
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.topnav button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate5 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate5 {
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.topnav button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate6 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate6 {
+    0% {
+        bottom: -100%;
+    }
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+@keyframes animate1 {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+body {
+    background-color: #232427;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+
+
+/* Left column */
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+
+/* Right column */
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: transparent;
+    padding-left: 20px;
+}
+
+
+/* Fake image */
+
+.fakeimg {
+    background: #2a2b2f;
+    border: 2px solid #1e1f23;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: 0.5%;
+    width: 100%;
+    padding: 20px;
+}
+
+.fakeimg:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Add a card effect for articles */
+
+.card {
+    position: relative;
+    width: 1300px;
+    height: 800px;
+    box-shadow: inset 5px 5px 5px rgba(255, 255, 255), inset -5px -5px 15px rgba(255, 255, 255), 5px 5px 15px rgba(255, 255, 255), -5px -5px 15px rgba(255, 255, 255);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Footer */
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollpath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+
+#progressbar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+}
